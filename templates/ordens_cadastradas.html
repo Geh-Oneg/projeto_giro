@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ordens Cadastradas</title>
+    <style>
+        body { font-family: Arial; padding: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        h1 { text-align: center; }
+        a { display: block; margin-top: 20px; text-align: center; text-decoration: none; color: #0066cc; }
+    </style>
+</head>
+<body>
+    <h1>Ordens de Serviço Cadastradas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Moto</th>
+            <th>Serviço</th>
+            <th>Status</th>
+        </tr>
+        {% for ordem in ordens %}
+        <tr>
+            <td>{{ ordem.id }}</td>
+            <td>{{ ordem.nome_cliente }}</td>
+            <td>{{ ordem.modelo }} - {{ ordem.placa }}</td>
+            <td>{{ ordem.problema }}</td>
+            <td>{{ ordem.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Voltar</a>
+</body>
+</html>
+

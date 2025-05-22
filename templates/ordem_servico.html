@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ordem de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        form {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h2>Ordem de Serviço</h2>
+<form action="/salvar_ordem" method="POST">
+    <h2>Shalom Motos</h2>
+<p>CNPJ: 00.000.000/0000-00</p>
+<p>Endereço: Rua Exemplo, 123 - Bairro Centro</p>
+<p>Telefone: (00) 0000-0000</p>
+
+<!-- Campos ocultos para enviar os dados ao backend -->
+<input type="hidden" name="nome_oficina" value="Shalom Motos">
+<input type="hidden" name="cnpj" value="00.000.000/0000-00">
+<input type="hidden" name="endereco_oficina" value="Rua Exemplo, 123 - Bairro Centro">
+<input type="hidden" name="telefone_oficina" value="(00) 0000-0000">
+
+
+    <h3>Dados do Cliente</h3>
+    <input type="text" name="nome_cliente" placeholder="Nome" required>
+    <input type="text" name="telefone_cliente" placeholder="Telefone" required>
+    <input type="text" name="endereco_cliente" placeholder="Endereço" required>
+    <input type="email" name="email_cliente" placeholder="Email (opcional)">
+
+    <h3>Dados da Moto</h3>
+    <input type="text" name="marca" placeholder="Marca" required>
+    <input type="text" name="modelo" placeholder="Modelo" required>
+    <input type="text" name="ano" placeholder="Ano" required>
+    <input type="text" name="cor" placeholder="Cor" required>
+    <input type="text" name="placa" placeholder="Placa" required>
+    <input type="text" name="quilometragem" placeholder="Quilometragem Atual" required>
+    <input type="text" name="chassi" placeholder="Número do Chassi" required>
+
+    <h3>Serviço</h3>
+    <textarea name="problema" placeholder="Descrição do Problema" required></textarea>
+    <textarea name="servicos_pecas" placeholder="Serviços e Peças (quantidade, valor unitário, total)" required></textarea>
+    <input type="text" name="mao_obra" placeholder="Valor da Mão de Obra" required>
+    <input type="text" name="total" placeholder="Orçamento Total" required>
+    <input type="text" name="forma_pagamento" placeholder="Forma de Pagamento" required>
+    <input type="text" name="garantia" placeholder="Garantia" required>
+
+    <h3>Outros</h3>
+    <input type="date" name="data_entrada" placeholder="Data de Entrada">
+    <input type="date" name="data_prevista" placeholder="Data de Entrega Prevista">
+    <input type="text" name="status" placeholder="Status do Serviço">
+    <textarea name="observacoes" placeholder="Observações Adicionais"></textarea>
+
+    <button type="submit">Salvar Ordem</button>
+</form>
+</body>
+</html>

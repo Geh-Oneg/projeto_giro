@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Motos Cadastradas</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Motos Cadastradas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Cor</th>
+            <th>Chassi</th>
+            <th>Placa</th>
+            <th>Observações</th>
+        </tr>
+        {% for moto in motos %}
+        <tr>
+            <td>{{ moto[0] }}</td>
+            <td>{{ moto[1] }}</td>
+            <td>{{ moto[2] }}</td>
+            <td>{{ moto[3] }}</td>
+            <td>{{ moto[4] }}</td>
+            <td>{{ moto[5] }}</td>
+            <td>{{ moto[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Voltar para a página inicial</a>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Moto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Cadastro de Moto</h2>
+    <form action="/salvar_moto" method="POST">
+        <input type="text" name="modelo" placeholder="Modelo" required>
+        <input type="number" name="ano" placeholder="Ano" required>
+        <input type="text" name="cor" placeholder="Cor" required>
+        <input type="text" name="chassi" placeholder="Chassi" required>
+        <input type="text" name="placa" placeholder="Placa" required>
+        <textarea name="observacoes" placeholder="Observações"></textarea>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
